@@ -1,72 +1,146 @@
-Hi 👋I'm Anbarasan
-==========================
+<div align="center">
 
-Web Developer and UI/UX designer
---------------------------------
+# Anbarasan A.
 
-🎨 Passionate UI/UX Designer | 💻 Full-Stack Developer Crafting seamless digital experiences through design and code. Love building user-friendly apps, websites, and solving real-world problems.
+**Full-Stack Developer** &nbsp;·&nbsp; **UI/UX Designer**
 
-* 🌍  I'm based in India
-* 🖥️  See my portfolio at [MyPortfolio](https://anbudev.vercel.app/)
-* ✉️  You can contact me at [anbarasan0909@gmail.com](mailto:anbarasan0909@gmail.com)
-* 🤝  I'm open to collaborating on UX design, full Stack Application
-* ⚡  Turning ideas into interfaces, and code into impact.
+*I design the interface, then I build it.*
 
-### Skills
+<br/>
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-anbudev.vercel.app-0891b2?style=flat-square&logo=vercel&logoColor=white)](https://anbudev.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0891b2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anbarasan-a-859651260)
+[![Email](https://img.shields.io/badge/Email-anbarasan0909@gmail.com-0891b2?style=flat-square&logo=gmail&logoColor=white)](mailto:anbarasan0909@gmail.com)
+[![Behance](https://img.shields.io/badge/Behance-Case_Studies-1c1917?style=flat-square&logo=behance&logoColor=white)](https://www.behance.net/anbarasanbaras3)
+[![Dribbble](https://img.shields.io/badge/Dribbble-Shots-1c1917?style=flat-square&logo=dribbble&logoColor=white)](https://dribbble.com/anbarasan0909)
+[![Medium](https://img.shields.io/badge/Medium-Writing-1c1917?style=flat-square&logo=medium&logoColor=white)](https://medium.com/@UX_Anbu)
 
-<p align="left">
-  <a href="https://www.python.org/" target="_blank" rel="noreferrer" style="margin-right: 8px;">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" width="36" height="36" alt="Python" />
-  </a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer" style="margin-right: 8px;">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JavaScript" />
-  </a>
-  <a href="https://git-scm.com/" target="_blank" rel="noreferrer" style="margin-right: 8px;">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" width="36" height="36" alt="Git" />
-  </a>
-  <a href="https://www.oracle.com/java/" target="_blank" rel="noreferrer" style="margin-right: 8px;">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/java-colored.svg" width="36" height="36" alt="Java" />
-  </a>
-  <a href="https://docs.microsoft.com/en-us/cpp/?view=msvc-170" target="_blank" rel="noreferrer" style="margin-right: 8px;">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/c-colored.svg" width="36" height="36" alt="C" />
-  </a>
-  <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer" style="margin-right: 8px;">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/visualstudiocode.svg" width="36" height="36" alt="VS Code" />
-  </a>
-  <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer" style="margin-right: 8px;">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" />
-  </a>
-  <a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer" style="margin-right: 8px;">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" />
-  </a>
-  <a href="https://vitejs.dev/" target="_blank" rel="noreferrer" style="margin-right: 8px;">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" width="36" height="36" alt="Vite" />
-  </a>
-  <a href="https://firebase.google.com/" target="_blank" rel="noreferrer" style="margin-right: 8px;">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/firebase-colored.svg" width="36" height="36" alt="Firebase" />
-  </a>
-  <a href="https://www.mysql.com/" target="_blank" rel="noreferrer" style="margin-right: 8px;">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mysql-colored.svg" width="36" height="36" alt="MySQL" />
-  </a>
-  <a href="https://www.figma.com/" target="_blank" rel="noreferrer" style="margin-right: 8px;">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg" width="36" height="36" alt="Figma" />
-  </a>
-  <a href="https://www.sketch.com/" target="_blank" rel="noreferrer" style="margin-right: 8px;">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sketch-colored.svg" width="36" height="36" alt="Sketch" />
-  </a>
-  <a href="https://framer.com" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/framer-colored.svg" width="36" height="36" alt="Framer" />
-  </a>
-</p>
+</div>
 
+---
 
-### Socials
+## About
 
-<p align="left"> <a href="https://www.behance.com/anbarasanbaras3" target="_blank" rel="noreferrer"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/behance-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/behance.svg" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/behance.svg" width="32" height="32" /> </picture> </a> <a href="https://www.dribbble.com/anbarasan0909" target="_blank" rel="noreferrer"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/dribbble-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/dribbble.svg" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/dribbble.svg" width="32" height="32" /> </picture> </a> <a href="https://www.github.com/Anbu1434" target="_blank" rel="noreferrer"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" /> </picture> </a> <a href="https://www.linkedin.com/in/anbarasan-a-859651260" target="_blank" rel="noreferrer"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" /> </picture> </a> <a href="http://www.medium.com/@UX_Anbu" target="_blank" rel="noreferrer"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/medium-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/medium.svg" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/medium.svg" width="32" height="32" /> </picture> </a></p>
+Final-year Computer Science undergrad based in Chennai, India, working at the seam between design and engineering. I sketch the flow in Figma, build it in React, and back it with Python services — so the usual design-to-dev handoff happens in my head instead of in a ticket queue.
 
-### Badges
+Most recently I worked on GenAI and backend systems at **Hexaware Technologies**, building FastAPI microservices at production scale. Right now I'm at **TectoFlow**, shipping full-stack features and looking for Software Engineer / Full-Stack roles for 2026.
 
-<b>My GitHub Stats</b>
+<!-- Edit the paragraph above to match your current title and focus. -->
 
-<a href="http://www.github.com/Anbu1434"><img src="https://github-readme-streak-stats.herokuapp.com/?user=Anbu1434&stroke=ffffff&background=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
+---
+
+## Two Halves of the Same Job
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Design**
+
+Figma · Framer · Sketch<br/>
+Design systems &amp; component libraries<br/>
+Wireframes → interactive prototypes<br/>
+Accessibility, type scales, motion
+
+</td>
+<td width="50%" valign="top">
+
+**Engineering**
+
+React · Vite · JavaScript · Tailwind<br/>
+Python · FastAPI · REST APIs<br/>
+MySQL · Firebase · Git<br/>
+Java · C · Data structures
+
+</td>
+</tr>
+</table>
+
+---
+
+## Featured Work
+
+| Project | What it does | Stack |
+| :--- | :--- | :--- |
+| **[Project Name](#)** | One line on the problem it solves — not what it's built with. | React, FastAPI, MySQL |
+| **[Project Name](#)** | Lead with the outcome: what a user can now do that they couldn't. | Next.js, Firebase |
+| **[Project Name](#)** | Keep it to a single sentence. Curiosity beats completeness. | Python, Figma |
+
+<!--
+Replace the three rows above with your strongest work. Guidelines:
+- Three great entries beat eight average ones.
+- Link the live demo where one exists, the repo otherwise.
+- Describe the problem, not the tech — the Stack column already covers that.
+-->
+
+---
+
+## Experience
+
+| | |
+| :--- | :--- |
+| **TectoFlow** | Full-Stack Developer · 2026 – Present |
+| **Hexaware Technologies** | GenAI &amp; Backend Intern · 2025 |
+| **Dvein Innovations** | Web Development Intern · 2024 |
+
+<!-- Correct the dates and exact titles above before publishing. -->
+
+---
+
+## Tech Stack
+
+**Languages**
+
+![Python](https://img.shields.io/badge/Python-1c1917?style=flat-square&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-1c1917?style=flat-square&logo=javascript&logoColor=white)
+![Java](https://img.shields.io/badge/Java-1c1917?style=flat-square&logo=openjdk&logoColor=white)
+![C](https://img.shields.io/badge/C-1c1917?style=flat-square&logo=c&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-1c1917?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1c1917?style=flat-square&logo=css3&logoColor=white)
+
+**Frameworks &amp; Tools**
+
+![React](https://img.shields.io/badge/React-1c1917?style=flat-square&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-1c1917?style=flat-square&logo=vite&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-1c1917?style=flat-square&logo=fastapi&logoColor=white)
+![Git](https://img.shields.io/badge/Git-1c1917?style=flat-square&logo=git&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-1c1917?style=flat-square&logo=visualstudiocode&logoColor=white)
+
+**Data**
+
+![MySQL](https://img.shields.io/badge/MySQL-1c1917?style=flat-square&logo=mysql&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-1c1917?style=flat-square&logo=firebase&logoColor=white)
+
+**Design**
+
+![Figma](https://img.shields.io/badge/Figma-1c1917?style=flat-square&logo=figma&logoColor=white)
+![Framer](https://img.shields.io/badge/Framer-1c1917?style=flat-square&logo=framer&logoColor=white)
+![Sketch](https://img.shields.io/badge/Sketch-1c1917?style=flat-square&logo=sketch&logoColor=white)
+
+---
+
+## Currently
+
+- 🔨 Building full-stack features at TectoFlow
+- 📚 Going deeper on system design and backend architecture
+- 🤝 Open to collaborating on UX-heavy full-stack products
+- 💬 Ask me about design systems, FastAPI, or turning a Figma file into shipped code
+
+---
+
+<div align="center">
+
+<a href="https://github.com/Anbu1434">
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Anbu1434&show_icons=true&hide_border=true&title_color=0891b2&icon_color=0891b2&text_color=ffffff&bg_color=1c1917&hide_title=true" alt="GitHub stats" />
+</a>
+<a href="https://github.com/Anbu1434">
+  <img height="160" src="https://streak-stats.demolab.com/?user=Anbu1434&hide_border=true&background=1c1917&stroke=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=8a8a8a" alt="GitHub streak" />
+</a>
+
+<br/><br/>
+
+**Open to Software Engineer &amp; Full-Stack roles — 2026**
+
+[anbudev.vercel.app](https://anbudev.vercel.app/) &nbsp;·&nbsp; [anbarasan0909@gmail.com](mailto:anbarasan0909@gmail.com)
+
+</div>
