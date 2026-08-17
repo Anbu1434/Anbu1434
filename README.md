@@ -1,146 +1,88 @@
-<div align="center">
+#!/usr/bin/env bash
+# Adds a gh-ascii ASCII profile card to the Anbu1434/Anbu1434 profile README.
+# Run from anywhere; it clones into the current directory if needed.
+set -euo pipefail
 
-# Anbarasan A.
+HANDLE="Anbu1434"
+REPO="https://github.com/${HANDLE}/${HANDLE}.git"
+DIR="${HANDLE}"
 
-**Full-Stack Developer** &nbsp;·&nbsp; **UI/UX Designer**
+# --- 1. get the repo -------------------------------------------------------
+if [ -d "${DIR}/.git" ]; then
+  echo "==> Using existing clone: ${DIR}"
+  git -C "${DIR}" pull --ff-only
+else
+  echo "==> Cloning ${REPO}"
+  git clone "${REPO}" "${DIR}"
+fi
+cd "${DIR}"
 
-*I design the interface, then I build it.*
+# --- 2. download both themes ----------------------------------------------
+# -f fails on HTTP errors, -L follows redirects. We additionally verify the
+# payload is really an SVG: a 200 response carrying an HTML error page would
+# otherwise sail straight through and commit a broken card.
+for THEME in dark light; do
+  OUT="${THEME}_mode.svg"
+  echo "==> Fetching ${THEME} card -> ${OUT}"
+  curl -fL --max-time 45 "https://gh.crafter.run/${HANDLE}?theme=${THEME}" -o "${OUT}"
 
-<br/>
+  if ! head -c 1024 "${OUT}" | grep -qi "<svg"; then
+    echo "ERROR: ${OUT} does not look like an SVG. First bytes:" >&2
+    head -c 300 "${OUT}" >&2
+    echo >&2
+    exit 1
+  fi
+  echo "    ok: $(wc -c < "${OUT}") bytes"
+done
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-anbudev.vercel.app-0891b2?style=flat-square&logo=vercel&logoColor=white)](https://anbudev.vercel.app/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0891b2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anbarasan-a-859651260)
-[![Email](https://img.shields.io/badge/Email-anbarasan0909@gmail.com-0891b2?style=flat-square&logo=gmail&logoColor=white)](mailto:anbarasan0909@gmail.com)
-[![Behance](https://img.shields.io/badge/Behance-Case_Studies-1c1917?style=flat-square&logo=behance&logoColor=white)](https://www.behance.net/anbarasanbaras3)
-[![Dribbble](https://img.shields.io/badge/Dribbble-Shots-1c1917?style=flat-square&logo=dribbble&logoColor=white)](https://dribbble.com/anbarasan0909)
-[![Medium](https://img.shields.io/badge/Medium-Writing-1c1917?style=flat-square&logo=medium&logoColor=white)](https://medium.com/@UX_Anbu)
+# --- 3. insert the block at the top of README.md ---------------------------
+touch README.md
 
-</div>
+if grep -q "dark_mode.svg" README.md; then
+  echo "==> README already references the card; leaving markup untouched."
+else
+  echo "==> Inserting <picture> block at top of README.md"
+  cp README.md README.md.bak            # safety net, deleted on success
+  {
+    cat <<'BLOCK'
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="light_mode.svg" />
+  <img alt="Anbu1434's GitHub profile" src="dark_mode.svg" />
+</picture>
 
----
+BLOCK
+    cat README.md.bak
+  } > README.md
 
-## About
+  # Confirm nothing was lost: new file must contain every old line.
+  if [ "$(wc -l < README.md)" -lt "$(wc -l < README.md.bak)" ]; then
+    echo "ERROR: README shrank. Restoring backup." >&2
+    mv README.md.bak README.md
+    exit 1
+  fi
+  rm README.md.bak
+fi
 
-Final-year Computer Science undergrad based in Chennai, India, working at the seam between design and engineering. I sketch the flow in Figma, build it in React, and back it with Python services — so the usual design-to-dev handoff happens in my head instead of in a ticket queue.
+# --- 4. review before committing ------------------------------------------
+cat <<EOF
 
-Most recently I worked on GenAI and backend systems at **Hexaware Technologies**, building FastAPI microservices at production scale. Right now I'm at **TectoFlow**, shipping full-stack features and looking for Software Engineer / Full-Stack roles for 2026.
+==> Files staged for review (NOT yet committed):
+$(git status --short)
 
-<!-- Edit the paragraph above to match your current title and focus. -->
+==> Look at both cards now, then commit. Fastest check is in a browser:
+    https://gh.crafter.run/${HANDLE}?theme=dark
+    https://gh.crafter.run/${HANDLE}?theme=light
 
----
+    Or open the local files:
+    xdg-open dark_mode.svg light_mode.svg   # Linux
+    open dark_mode.svg light_mode.svg       # macOS
+    start dark_mode.svg                     # Windows
 
-## Two Halves of the Same Job
+==> If both read well, commit and push:
+    git add dark_mode.svg light_mode.svg README.md
+    git commit -m "feat: add gh-ascii profile card"
+    git push
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-**Design**
-
-Figma · Framer · Sketch<br/>
-Design systems &amp; component libraries<br/>
-Wireframes → interactive prototypes<br/>
-Accessibility, type scales, motion
-
-</td>
-<td width="50%" valign="top">
-
-**Engineering**
-
-React · Vite · JavaScript · Tailwind<br/>
-Python · FastAPI · REST APIs<br/>
-MySQL · Firebase · Git<br/>
-Java · C · Data structures
-
-</td>
-</tr>
-</table>
-
----
-
-## Featured Work
-
-| Project | What it does | Stack |
-| :--- | :--- | :--- |
-| **[Project Name](#)** | One line on the problem it solves — not what it's built with. | React, FastAPI, MySQL |
-| **[Project Name](#)** | Lead with the outcome: what a user can now do that they couldn't. | Next.js, Firebase |
-| **[Project Name](#)** | Keep it to a single sentence. Curiosity beats completeness. | Python, Figma |
-
-<!--
-Replace the three rows above with your strongest work. Guidelines:
-- Three great entries beat eight average ones.
-- Link the live demo where one exists, the repo otherwise.
-- Describe the problem, not the tech — the Stack column already covers that.
--->
-
----
-
-## Experience
-
-| | |
-| :--- | :--- |
-| **TectoFlow** | Full-Stack Developer · 2026 – Present |
-| **Hexaware Technologies** | GenAI &amp; Backend Intern · 2025 |
-| **Dvein Innovations** | Web Development Intern · 2024 |
-
-<!-- Correct the dates and exact titles above before publishing. -->
-
----
-
-## Tech Stack
-
-**Languages**
-
-![Python](https://img.shields.io/badge/Python-1c1917?style=flat-square&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-1c1917?style=flat-square&logo=javascript&logoColor=white)
-![Java](https://img.shields.io/badge/Java-1c1917?style=flat-square&logo=openjdk&logoColor=white)
-![C](https://img.shields.io/badge/C-1c1917?style=flat-square&logo=c&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-1c1917?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1c1917?style=flat-square&logo=css3&logoColor=white)
-
-**Frameworks &amp; Tools**
-
-![React](https://img.shields.io/badge/React-1c1917?style=flat-square&logo=react&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-1c1917?style=flat-square&logo=vite&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-1c1917?style=flat-square&logo=fastapi&logoColor=white)
-![Git](https://img.shields.io/badge/Git-1c1917?style=flat-square&logo=git&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-1c1917?style=flat-square&logo=visualstudiocode&logoColor=white)
-
-**Data**
-
-![MySQL](https://img.shields.io/badge/MySQL-1c1917?style=flat-square&logo=mysql&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-1c1917?style=flat-square&logo=firebase&logoColor=white)
-
-**Design**
-
-![Figma](https://img.shields.io/badge/Figma-1c1917?style=flat-square&logo=figma&logoColor=white)
-![Framer](https://img.shields.io/badge/Framer-1c1917?style=flat-square&logo=framer&logoColor=white)
-![Sketch](https://img.shields.io/badge/Sketch-1c1917?style=flat-square&logo=sketch&logoColor=white)
-
----
-
-## Currently
-
-- 🔨 Building full-stack features at TectoFlow
-- 📚 Going deeper on system design and backend architecture
-- 🤝 Open to collaborating on UX-heavy full-stack products
-- 💬 Ask me about design systems, FastAPI, or turning a Figma file into shipped code
-
----
-
-<div align="center">
-
-<a href="https://github.com/Anbu1434">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Anbu1434&show_icons=true&hide_border=true&title_color=0891b2&icon_color=0891b2&text_color=ffffff&bg_color=1c1917&hide_title=true" alt="GitHub stats" />
-</a>
-<a href="https://github.com/Anbu1434">
-  <img height="160" src="https://streak-stats.demolab.com/?user=Anbu1434&hide_border=true&background=1c1917&stroke=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=8a8a8a" alt="GitHub streak" />
-</a>
-
-<br/><br/>
-
-**Open to Software Engineer &amp; Full-Stack roles — 2026**
-
-[anbudev.vercel.app](https://anbudev.vercel.app/) &nbsp;·&nbsp; [anbarasan0909@gmail.com](mailto:anbarasan0909@gmail.com)
-
-</div>
+==> Then confirm it renders: https://github.com/${HANDLE}
+EOF
