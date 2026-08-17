@@ -1,88 +1,129 @@
-#!/usr/bin/env bash
-# Adds a gh-ascii ASCII profile card to the Anbu1434/Anbu1434 profile README.
-# Run from anywhere; it clones into the current directory if needed.
-set -euo pipefail
-
-HANDLE="Anbu1434"
-REPO="https://github.com/${HANDLE}/${HANDLE}.git"
-DIR="${HANDLE}"
-
-# --- 1. get the repo -------------------------------------------------------
-if [ -d "${DIR}/.git" ]; then
-  echo "==> Using existing clone: ${DIR}"
-  git -C "${DIR}" pull --ff-only
-else
-  echo "==> Cloning ${REPO}"
-  git clone "${REPO}" "${DIR}"
-fi
-cd "${DIR}"
-
-# --- 2. download both themes ----------------------------------------------
-# -f fails on HTTP errors, -L follows redirects. We additionally verify the
-# payload is really an SVG: a 200 response carrying an HTML error page would
-# otherwise sail straight through and commit a broken card.
-for THEME in dark light; do
-  OUT="${THEME}_mode.svg"
-  echo "==> Fetching ${THEME} card -> ${OUT}"
-  curl -fL --max-time 45 "https://gh.crafter.run/${HANDLE}?theme=${THEME}" -o "${OUT}"
-
-  if ! head -c 1024 "${OUT}" | grep -qi "<svg"; then
-    echo "ERROR: ${OUT} does not look like an SVG. First bytes:" >&2
-    head -c 300 "${OUT}" >&2
-    echo >&2
-    exit 1
-  fi
-  echo "    ok: $(wc -c < "${OUT}") bytes"
-done
-
-# --- 3. insert the block at the top of README.md ---------------------------
-touch README.md
-
-if grep -q "dark_mode.svg" README.md; then
-  echo "==> README already references the card; leaving markup untouched."
-else
-  echo "==> Inserting <picture> block at top of README.md"
-  cp README.md README.md.bak            # safety net, deleted on success
-  {
-    cat <<'BLOCK'
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg" />
   <source media="(prefers-color-scheme: light)" srcset="light_mode.svg" />
   <img alt="Anbu1434's GitHub profile" src="dark_mode.svg" />
 </picture>
 
-BLOCK
-    cat README.md.bak
-  } > README.md
+# Hi, I'm Anbu 👋
 
-  # Confirm nothing was lost: new file must contain every old line.
-  if [ "$(wc -l < README.md)" -lt "$(wc -l < README.md.bak)" ]; then
-    echo "ERROR: README shrank. Restoring backup." >&2
-    mv README.md.bak README.md
-    exit 1
-  fi
-  rm README.md.bak
-fi
+### Full-Stack Developer | UI/UX Designer | Freelancer
 
-# --- 4. review before committing ------------------------------------------
-cat <<EOF
+I'm a Computer Science Engineering student and full-stack developer passionate about building modern, scalable, and user-focused digital products.
 
-==> Files staged for review (NOT yet committed):
-$(git status --short)
+I enjoy turning ideas into **web applications, SaaS products, business software, and intuitive user experiences**.
 
-==> Look at both cards now, then commit. Fastest check is in a browser:
-    https://gh.crafter.run/${HANDLE}?theme=dark
-    https://gh.crafter.run/${HANDLE}?theme=light
+---
 
-    Or open the local files:
-    xdg-open dark_mode.svg light_mode.svg   # Linux
-    open dark_mode.svg light_mode.svg       # macOS
-    start dark_mode.svg                     # Windows
+## 🚀 About Me
 
-==> If both read well, commit and push:
-    git add dark_mode.svg light_mode.svg README.md
-    git commit -m "feat: add gh-ascii profile card"
-    git push
+* 🎓 B.E. Computer Science & Engineering — 2026
+* 💻 Full-Stack Developer
+* 🎨 UI/UX Designer
+* 🌐 Building websites, web apps & business software
+* 🤖 Exploring AI-powered applications and automation
+* 🚀 Founder & Developer at **TectFlow**
+* 📍 Chennai, India
 
-==> Then confirm it renders: https://github.com/${HANDLE}
-EOF
+---
+
+## 🛠️ Tech Stack
+
+### Languages
+
+`Python` `JavaScript` `TypeScript` `SQL` `C`
+
+### Frontend
+
+`React` `Next.js` `React Native` `Expo` `HTML5` `CSS3` `Tailwind CSS`
+
+### Backend
+
+`Node.js` `Express.js` `Django` `FastAPI`
+
+### Databases
+
+`PostgreSQL` `MySQL` `MongoDB` `Firebase` `SQLite` `Redis`
+
+### Tools & Platforms
+
+`Git` `GitHub` `Docker` `Postman` `Vercel` `AWS`
+
+### AI & Development Tools
+
+`Claude Code` `AI Agents` `LLM APIs` `n8n`
+
+---
+
+## 💼 Featured Projects
+
+### 🏥 Hospital Management System
+
+Production-ready desktop HMS for managing hospital operations.
+
+**Tech:** Electron · Next.js · TypeScript · SQLite · Prisma
+
+### 🩺 Clinic Management Platform
+
+Modern clinic website with appointment management and an administrative dashboard.
+
+**Tech:** Next.js · MongoDB · NextAuth.js · TypeScript · Vercel
+
+### 📄 Document Deadline Management
+
+Application for tracking documents, deadlines and automated alerts.
+
+**Tech:** Django · REST API · React · PostgreSQL
+
+### ✈️ AI Travel Planner
+
+AI-powered travel planning application that generates personalized travel itineraries.
+
+**Tech:** React · Python · AI APIs
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Anbu1434&show_icons=true&theme=tokyonight&hide_border=true" height="170" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Anbu1434&layout=compact&theme=tokyonight&hide_border=true" height="170" />
+</p>
+
+---
+
+## 🔥 What I'm Currently Working On
+
+* 🚀 Building and growing **TectFlow**
+* 💻 Developing full-stack web applications
+* 🤖 Exploring AI agents and automation
+* 🎨 Improving UI/UX design skills
+* 🌍 Working toward international freelance opportunities
+
+---
+
+## 🤝 Let's Connect
+
+I'm open to:
+
+* Freelance projects
+* Web development collaborations
+* UI/UX projects
+* SaaS ideas
+* AI-powered applications
+* Business software development
+
+### 📫 Connect With Me
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge\&logo=linkedin)](https://www.linkedin.com/)
+[![Instagram](https://img.shields.io/badge/Instagram-Follow-E4405F?style=for-the-badge\&logo=instagram)](https://www.instagram.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-Anbu1434-black?style=for-the-badge\&logo=github)](https://github.com/Anbu1434)
+
+---
+
+<p align="center">
+  <b>💡 Building ideas into digital products.</b>
+</p>
+
+<p align="center">
+  ⭐ If you find my projects interesting, consider starring them!
+</p>
