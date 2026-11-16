@@ -1,5 +1,5 @@
 
-# Hi, I'm Anbarasan 👋
+# Hi, I'm Anbarasan 👨‍💻
 
 Software Developer | Python | FastAPI | React | AI
 
